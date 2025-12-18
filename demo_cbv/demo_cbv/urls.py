@@ -1,5 +1,5 @@
 """
-URL configuration for order_project project.
+URL configuration for demo_cbv project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from order import views
+from orders import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('orders/', views.OrderListView.as_view(), name='orders'),
+    path('orders/', views.OrderListView.as_view(), name='order-list'),
 ]

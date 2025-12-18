@@ -10,7 +10,7 @@ class OrderListView(ListView):
     template_name = "orders.html"
 
     def get(self, request, *args, **kwargs):
-        # format demandé : html (par défaut), json ou csv
+        # format required : html (default), json or csv
         self.format = request.GET.get("format", "html")
         return super().get(request, *args, **kwargs)
 
@@ -35,5 +35,5 @@ class OrderListView(ListView):
 
             return response
 
-        # HTML par défaut
+        # HTML by default
         return super().render_to_response(context)
