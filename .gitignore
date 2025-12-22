@@ -29,9 +29,6 @@ MANIFEST
 # virtual environments
 .venv/
 
-# image files
-images/*.png
-
 .idea
 
 # PyInstaller
