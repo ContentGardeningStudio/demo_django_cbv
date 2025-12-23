@@ -9,8 +9,8 @@ This example is explained in detail in the accompanying Skool post:
 This Django view demonstrates how to expose the same data source (orders) in multiple formats depending on a query parameter:
 
 - HTML (default): renders a standard list page using a template.
-- JSON (?format=json): returns a machine-readable response for APIs or frontend apps.
-- CSV (?format=csv): allows users to download the data for reporting or spreadsheet analysis.
+- JSON (`?format=json`): returns a machine-readable response for APIs or frontend apps.
+- CSV (`?format=csv`): allows users to download the data for reporting or spreadsheet analysis.
 
 This pattern is useful when:
 
@@ -18,12 +18,9 @@ This pattern is useful when:
 - You need quick data exports without creating a separate admin or API view.
 - You want to showcase how a Django Class-Based View can be extended without rewriting all the logic.
 
-## CSV export (`orders.csv`)
-When requesting `?format=csv`, the response triggers a file download named `orders.csv`.
-
-The file contains:
-- One header row
-- One row per order
-<p align="center">
-  <img src="images/orders_demo_cbv.png" alt="orders_csv" width="600">
-</p>
+## Run tests
+```
+.venv\Scripts\activate (Windows)
+cd demo_cbv
+python manage.py test
+```
