@@ -13,3 +13,8 @@ class TestViews(TestCase):
         url = reverse("order-list")
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+
+    def test_order_list_response_content(self):
+        url = reverse("order-list")
+        response = self.client.get(url)
+        self.assertIn(b"Orders", response.content)
